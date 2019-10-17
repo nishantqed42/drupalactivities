@@ -1,0 +1,6 @@
+name: Drupal Activities
+description: Drupal 8 Activities
+package: Custom
+
+type: module
+core: 8.x

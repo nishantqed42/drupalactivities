@@ -1,0 +1,28 @@
+activity.content:
+  path: '/static-content'
+  defaults:
+    _controller: '\Drupal\activities\Controller\StaticController::Content'
+    _title: 'Static page Content'
+  requirements: 
+    _permission: 'access content'
+
+activity1.content:
+  path: '/arg-demo/{arg}'
+  defaults:
+    _controller: '\Drupal\activities\Controller\DynamicRouteController::Content'
+    _title: 'Dynamic Routing example'
+    arg: 'Default text'
+  requirements: 
+    _permission: 'access content'
+
+activity2.content:
+  path: '/list/{nodeid}'
+  defaults:
+    _controller: '\Drupal\activities\Controller\EntityDynamicRouteController::Content'
+    _title: 'Node Detail'
+  requirements: 
+    _permission: 'access content'
+  options:
+    parameters:
+      nodeid:
+        type: entity:node
