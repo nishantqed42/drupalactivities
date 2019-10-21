@@ -1,0 +1,19 @@
+staticcontent.admin:
+  title: 'Static content'
+  description: 'Static content page link'
+  parent: system.admin_config_development
+  route_name: activity.content
+
+tab1.demo:
+  title: 'Tab1'
+  description: 'tab 1 menu link'
+  parent: main
+  menu_name: main
+  route_name: activity1.content
+
+tab2.demo:
+  title: 'Tab2'
+  description: 'Tab 2 menu link'
+  parent: main
+  menu_name: main
+  route_name: activity1.content

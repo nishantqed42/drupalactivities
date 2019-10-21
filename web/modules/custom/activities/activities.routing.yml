@@ -16,13 +16,30 @@ activity1.content:
     _permission: 'access content'
 
 activity2.content:
-  path: '/list/{nodeid}'
+  path: '/list/{nodeinfo}'
   defaults:
     _controller: '\Drupal\activities\Controller\EntityDynamicRouteController::Content'
     _title: 'Node Detail'
+    nodeinfo: 1
   requirements: 
     _permission: 'access content'
   options:
     parameters:
-      nodeid:
+      nodeinfo:
+        type: entity:node
+
+activity3.content:
+  path: '/listnodes/{nodeinfo1}/{nodeinfo2}'
+  defaults:
+    _controller: '\Drupal\activities\Controller\EntityDynamicRouteController::multiplenodes'
+    _title: 'Node Detail'
+    nodeinfo1: 1
+    nodeinfo2: 1
+  requirements: 
+    _permission: 'access content'
+  options:
+    parameters:
+      nodeinfo1:
+        type: entity:node
+      nodeinfo2:
         type: entity:node
