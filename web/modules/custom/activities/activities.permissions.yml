@@ -1,0 +1,9 @@
+activity permission:
+  title: 'Access training content'
+  description: 'custom permission to access activity content'
+  restrict access: true
+
+list permission:
+  title: 'User access list page'
+  description: 'Restricted access for node list page for author only.'
+  

@@ -4,7 +4,7 @@ activity.content:
     _controller: '\Drupal\activities\Controller\StaticController::Content'
     _title: 'Static page Content'
   requirements: 
-    _permission: 'access content'
+    _permission: 'activity permission'
 
 activity1.content:
   path: '/arg-demo/{arg}'
@@ -22,7 +22,7 @@ activity2.content:
     _title: 'Node Detail'
     nodeinfo: 1
   requirements: 
-    _permission: 'access content'
+    _custom_access: 'Drupal\activities\Controller\EntityDynamicRouteController::access'
   options:
     parameters:
       nodeinfo:
@@ -43,3 +43,19 @@ activity3.content:
         type: entity:node
       nodeinfo2:
         type: entity:node
+
+simple.form:
+  path: '/simple-form'
+  defaults:
+    _title: 'Simple form'
+    _form: '\Drupal\activities\Form\SimpleForm'
+  requirements:
+    _permission: 'Access content'
+
+dic.form:
+  path: '/dic-form'
+  defaults:
+    _title: 'Advance form'
+    _form: '\Drupal\activities\Form\DicForm'
+  requirements:
+    _permission: 'Access content'

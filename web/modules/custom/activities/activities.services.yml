@@ -1,0 +1,4 @@
+services:
+  activities.datastore:
+    class: Drupal\activities\Services\StoreData
+    arguments: ['@database']

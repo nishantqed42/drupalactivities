@@ -4,6 +4,8 @@ namespace Drupal\activities\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
 
 /**
  * An example of entity based dynamic route.
@@ -21,6 +23,11 @@ class EntityDynamicRouteController extends ControllerBase {
     return $nodeinfo;
   }
 
+  public function access(AccountInterface $account, nodeInterface $nodeinfo) {
+    $nodeAuthor = $nodeinfo->getOwnerId();
+    $currentUserId = $account->id();
+    return AccessResult::allowedIf($nodeAuthor == $currentUserId);
+  }
   /**
    * Display node information.
    *
