@@ -17,3 +17,9 @@ tab2.demo:
   parent: main
   menu_name: main
   route_name: activity1.content
+
+configexample.admin:
+  title: 'App Id Configuration'
+  description: 'Admin AppID setting form'
+  parent: system.admin_config_development
+  route_name: examplesetting.form

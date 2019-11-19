@@ -59,3 +59,19 @@ dic.form:
     _form: '\Drupal\activities\Form\DicForm'
   requirements:
     _permission: 'Access content'
+
+formstateexample.form:
+  path: '/formstateexample'
+  defaults:
+    _title: 'Form state example form'
+    _form: '\Drupal\activities\Form\FormStateExample'
+  requirements:
+    _permission: 'Access content'
+
+examplesetting.form:
+  path: 'admin/config/activity/examplesetting'
+  defaults:
+    _form: '\Drupal\activities\Form\SettingFormExample'
+    _title: 'App Id setting Form'
+  requirements:
+    _permission: 'Access content'

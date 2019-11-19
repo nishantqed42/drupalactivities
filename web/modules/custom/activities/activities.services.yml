@@ -2,3 +2,7 @@ services:
   activities.datastore:
     class: Drupal\activities\Services\StoreData
     arguments: ['@database']
+
+  activities.weatherinformation:
+    class: Drupal\activities\Services\WeatherInformation
+    arguments: ['@http_client', '@config.factory']

@@ -1,0 +1,16 @@
+<?php
+
+function activities_theme() {
+  return array(
+    'weather_block' => array(
+      'variables' => array(
+          'city' => NULL,
+          'temp' => NULL,
+          'pressure' => NULL,
+          'humidity' => NULL,
+          'temp_min' => NULL,
+          'temp_max' => NULL,
+      ),
+    ),
+  );
+}
